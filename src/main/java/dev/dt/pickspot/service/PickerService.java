@@ -11,32 +11,25 @@ public class PickerService {
 	private static final int INVALID = 10_000;
 
 	public Optional<Slot> chooseBestSlot(Container c, List<Slot> slots) {
-    Slot bestSlot = null;
-    int bestDistance = Integer.MAX_VALUE;
-    
-    final int contX = c.x();
-    final int contY = c.y();
-    final boolean needsCold = c.needsCold();
-    final boolean isBigContainer = c.size().equals("big");
-    
-    for (Slot s : slots) {
-			if (
-				s.occupied() ||
-				needsCold && !s.hasColdUnit() ||
-				isBigContainer && s.sizeCap().equals("small")
-			) continue;
-			
-			int distance = Math.abs(contX - s.x()) + Math.abs(contY - s.y());
-			
-			if (distance == 0)
-				return Optional.of(s);
-			
+		final boolean cSize = c.size().equals("big");
+		final boolean cNeedsCold = c.needsCold();
+		final int cX = c.x();
+		final int cY = c.y();
+		Slot bestSlot = null;
+		int bestDistance = INVALID + 1;
+
+		for (Slot s : slots) {
+			if (cSize && s.sizeCap().equals("small")) continue;
+			if (cNeedsCold && !s.hasColdUnit()) continue;
+			if (s.occupied()) continue;
+
+			int distance = Math.abs(c.x() - s.x()) + Math.abs(c.y() - s.y());		
 			if (distance < bestDistance) {
 				bestDistance = distance;
 				bestSlot = s;
 			}
-    }
+		}
 
-    return Optional.empty();
+		return bestDistance >= INVALID ? Optional.empty() : Optional.of(bestSlot);
 	}
 }

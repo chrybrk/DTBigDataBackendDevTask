@@ -13,6 +13,7 @@ mvn test   # runs PickerServiceTest
 # Benchmark
 - Benchmark is done on `HP 240 G1 Notebook` with `4GB RAM`.
 - Linux: 6.13.8-zen1-1-zen
+- The results are achived after 10 or so iterations.
 ```txt
 This is ApacheBench, Version 2.3 <$Revision: 1923142 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
@@ -40,35 +41,35 @@ Document Path:          /pickSpot
 Document Length:        28 bytes
 
 Concurrency Level:      100
-Time taken for tests:   0.482 seconds
+Time taken for tests:   0.303 seconds
 Complete requests:      1000
 Failed requests:        0
 Non-2xx responses:      1000
 Total transferred:      133000 bytes
 Total body sent:        436000
 HTML transferred:       28000 bytes
-Requests per second:    2076.26 [#/sec] (mean)
-Time per request:       48.163 [ms] (mean)
-Time per request:       0.482 [ms] (mean, across all concurrent requests)
-Transfer rate:          269.67 [Kbytes/sec] received
-                        884.03 kb/s sent
-                        1153.70 kb/s total
+Requests per second:    3304.09 [#/sec] (mean)
+Time per request:       30.265 [ms] (mean)
+Time per request:       0.303 [ms] (mean, across all concurrent requests)
+Transfer rate:          429.14 [Kbytes/sec] received
+                        1406.82 kb/s sent
+                        1835.97 kb/s total
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0    8   5.5      8      24
-Processing:     3   37  17.8     38      85
-Waiting:        2   30  15.5     26      80
-Total:          8   46  15.2     46      95
+Connect:        0    8   4.8      7      19
+Processing:     3   21   9.1     20      49
+Waiting:        1   16   7.4     15      41
+Total:          9   29   7.7     28      60
 
 Percentage of the requests served within a certain time (ms)
-  50%     46
-  66%     53
-  75%     56
-  80%     59
-  90%     65
-  95%     70
-  98%     75
-  99%     78
- 100%     95 (longest request)
+  50%     28
+  66%     33
+  75%     34
+  80%     35
+  90%     38
+  95%     41
+  98%     46
+  99%     48
+ 100%     60 (longest request)
 ```

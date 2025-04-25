@@ -10,10 +10,16 @@ import org.springframework.http.HttpStatus;
 import dev.dt.pickspot.service.PickerService;
 import dev.dt.pickspot.dto.PickRequest;
 import dev.dt.pickspot.dto.PickResponse;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import java.util.Map;
 
 @RestController
 @SpringBootApplication
+@EnableCaching
+@EnableAsync
+@EnableScheduling
 public class PickspotApplication {
 
 	public static void main(String[] args) { SpringApplication.run(PickspotApplication.class, args); }
