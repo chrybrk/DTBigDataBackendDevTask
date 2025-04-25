@@ -1,4 +1,6 @@
-# Pick‑a‑Spot API	
+## [TASK 2 - System Design](https://docs.google.com/spreadsheets/d/1Jx8_NOiCqblaf6qUwpK7njclWk_v2d7H_4pQseDrwao/edit?usp=sharing)
+
+# Pick‑a‑Spot API
 ## Build & Run	
 mvn spring-boot:run	
 ## Endpoint	
@@ -41,74 +43,74 @@ Document Path:          /pickSpot
 Document Length:        35 bytes
 
 Concurrency Level:      100
-Time taken for tests:   1.879 seconds
+Time taken for tests:   1.080 seconds
 Complete requests:      1000
 Failed requests:        0
 Total transferred:      140000 bytes
 Total body sent:        436000
 HTML transferred:       35000 bytes
-Requests per second:    532.32 [#/sec] (mean)
-Time per request:       187.856 [ms] (mean)
-Time per request:       1.879 [ms] (mean, across all concurrent requests)
-Transfer rate:          72.78 [Kbytes/sec] received
-                        226.65 kb/s sent
-                        299.43 kb/s total
+Requests per second:    926.23 [#/sec] (mean)
+Time per request:       107.964 [ms] (mean)
+Time per request:       1.080 [ms] (mean, across all concurrent requests)
+Transfer rate:          126.63 [Kbytes/sec] received
+                        394.37 kb/s sent
+                        521.01 kb/s total
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
-Connect:        0   25  22.1     18      92
-Processing:    18  158  79.5    152     496
-Waiting:        9  139  68.6    132     368
-Total:         26  183  67.5    175     510
+Connect:        0   15  13.7     12      61
+Processing:     7   90  43.0     94     189
+Waiting:        5   78  39.2     78     164
+Total:         14  105  34.7    108     194
 
 Percentage of the requests served within a certain time (ms)
-  50%    175
-  66%    208
-  75%    230
-  80%    243
-  90%    266
-  95%    280
-  98%    350
-  99%    388
- 100%    510 (longest request)
+  50%    108
+  66%    124
+  75%    133
+  80%    139
+  90%    150
+  95%    157
+  98%    165
+  99%    175
+ 100%    194 (longest request)
 
 Summary:
-  Total:	0.8762 secs
-  Slowest:	0.1735 secs
-  Fastest:	0.0084 secs
-  Average:	0.0794 secs
-  Requests/sec:	570.6618
+  Total:	0.4723 secs
+  Slowest:	0.2087 secs
+  Fastest:	0.0021 secs
+  Average:	0.0400 secs
+  Requests/sec:	1058.6865
 
 
 Response time histogram:
-  0.008 [1]	|
-  0.025 [6]	|■■
-  0.041 [26]	|■■■■■■■■■
-  0.058 [81]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.074 [117]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.091 [115]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.107 [78]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■
-  0.124 [41]	|■■■■■■■■■■■■■■
-  0.140 [21]	|■■■■■■■
-  0.157 [9]	|■■■
-  0.173 [5]	|■■
+  0.002 [1]	|
+  0.023 [144]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.043 [186]	|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.064 [116]	|■■■■■■■■■■■■■■■■■■■■■■■■■
+  0.085 [23]	|■■■■■
+  0.105 [8]	|■■
+  0.126 [3]	|■
+  0.147 [4]	|■
+  0.167 [10]	|■■
+  0.188 [2]	|
+  0.209 [3]	|■
 
 
 Latency distribution:
-  10% in 0.0452 secs
-  25% in 0.0594 secs
-  50% in 0.0776 secs
-  75% in 0.0976 secs
-  90% in 0.1192 secs
-  95% in 0.1299 secs
-  99% in 0.1601 secs
+  10% in 0.0105 secs
+  25% in 0.0211 secs
+  50% in 0.0343 secs
+  75% in 0.0499 secs
+  90% in 0.0666 secs
+  95% in 0.1016 secs
+  99% in 0.1754 secs
 
 Details (average, fastest, slowest):
-  DNS+dialup:	0.0033 secs, 0.0084 secs, 0.1735 secs
-  DNS-lookup:	0.0011 secs, 0.0000 secs, 0.0266 secs
-  req write:	0.0013 secs, 0.0000 secs, 0.0449 secs
-  resp wait:	0.0654 secs, 0.0083 secs, 0.1663 secs
-  resp read:	0.0085 secs, 0.0000 secs, 0.0704 secs
+  DNS+dialup:	0.0012 secs, 0.0021 secs, 0.2087 secs
+  DNS-lookup:	0.0005 secs, 0.0000 secs, 0.0078 secs
+  req write:	0.0005 secs, 0.0000 secs, 0.0279 secs
+  resp wait:	0.0351 secs, 0.0017 secs, 0.2082 secs
+  resp read:	0.0026 secs, 0.0000 secs, 0.0395 secs
 
 Status code distribution:
   [200]	500 responses
